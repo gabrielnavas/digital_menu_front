@@ -15,18 +15,22 @@ function App() {
   return (
     <div className='container'>
       <h1>Cardápio</h1>
-      <button onClick={handleOpenModal}>Novo</button>
-      <div className='card-grid-body'>
-        {
-          data.map(foodData => (
-            <Card 
-              key={foodData.id}
-              price={foodData.price}
-              title={foodData.title}
-              image={foodData.image}
-            />
-          ))
-        }
+      <div className="card-grid">
+        <div className="card-grid-header">
+          <button onClick={handleOpenModal}>Novo</button>
+        </div>
+        <div className='card-grid-body'>
+          {
+            data.map(foodData => (
+              <Card 
+                key={foodData.id}
+                price={foodData.price}
+                title={foodData.title}
+                image={foodData.image}
+              />
+            ))
+          }
+        </div>
       </div>
       {isModalOpen && <CreateModal closeModal={handleOpenModal} />}
     </div>
