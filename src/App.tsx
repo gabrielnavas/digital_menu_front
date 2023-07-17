@@ -17,7 +17,7 @@ function App() {
       <h1>Cardápio</h1>
       <div className="card-grid">
         <div className="card-grid-header">
-          <button onClick={handleOpenModal}>Novo</button>
+          <button className='btn btn-small btn-primary' onClick={handleOpenModal}>Novo</button>
         </div>
         <div className='card-grid-body'>
           {

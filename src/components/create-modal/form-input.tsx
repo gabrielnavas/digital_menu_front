@@ -1,13 +1,13 @@
 import "./form-input.css"
 
-type InputProps = {
+type FormInputProps = {
   label: string
   value: string | number
   updateValue(value: unknown): void
   placeholder?: string
 }
 
-export const Input = ({label, value, updateValue, placeholder }: InputProps) => {
+export const FormInput = ({label, value, updateValue, placeholder }: FormInputProps) => {
   return (
     <div className="form-input">
       <label htmlFor={label}>{label}</label>

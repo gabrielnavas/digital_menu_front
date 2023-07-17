@@ -17,22 +17,3 @@
   display: flex;
   flex-direction: column;
 }
-
-.btn {
-  font-weight: bold;
-  margin-top: 10px;
-  transition: 300ms;
-}
-.btn:hover {
-  scale: 1.05;
-  border: 0.5px solid black;
-}
-
-.modal-overflow form .btn-primary {
-  background-color: chocolate;  
-}
-
-.modal-overflow form .btn-secondary {
-  background-color: rgb(189, 138, 102);  
-  font-weight: 400;
-}

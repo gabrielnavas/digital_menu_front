@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react"
+
+import { toast } from 'react-toastify';
+
 import { useFoodDataMutate } from "../../hooks/useFoodDataMutate"
 import { FoodData } from "../../types/FoodData"
 
 import './create-modal.css'
-import { Input } from "./form-input"
+import { FormInput } from "./form-input"
 
 
 type CreateModalProps = {
@@ -25,10 +28,13 @@ export const CreateModal = ({ closeModal }: CreateModalProps) => {
     mutate(foodData)
   }
 
+  const notifySuccess = () => toast("Wow so easy!");
+
   useEffect(() => {
     if (!isSuccess) {
       return
     }
+    notifySuccess()
     closeModal()
   }, [isSuccess, closeModal])
 
@@ -39,11 +45,11 @@ export const CreateModal = ({ closeModal }: CreateModalProps) => {
       <div className="modal-body">
         <h2>Cadastre um novo item no cardápio</h2>
         <form className="input-container" >
-          <Input label="Título" value={title} updateValue={setTitle} placeholder="Pizza..." />
-          <Input label="Preço" value={price} updateValue={setPrice} placeholder="29.30" />
-          <Input label="Imagem" value={image} updateValue={setImage} placeholder="https://..." />
-          <button type="button" onClick={submit} className="btn btn-primary">{postButtonText}</button>
-          <button type="button" onClick={closeModal} className="btn btn-secondary">Cancelar</button>
+          <FormInput label="Título" value={title} updateValue={setTitle} placeholder="Pizza..." />
+          <FormInput label="Preço" value={price} updateValue={setPrice} placeholder="29.30" />
+          <FormInput label="Imagem" value={image} updateValue={setImage} placeholder="https://..." />
+          <button type="button" onClick={submit} className="btn btn-medium btn-primary">{postButtonText}</button>
+          <button type="button" onClick={closeModal} className="btn btn-medium btn-secondary">Cancelar</button>
         </form>
       </div>
     </div>
