@@ -4,9 +4,11 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+  position: relative;
 }
 
-.card-grid {
+.card-grid-body {
   display: flex;
-  width: 765px;
+  flex-wrap: wrap;
+  width: 798px;
 }

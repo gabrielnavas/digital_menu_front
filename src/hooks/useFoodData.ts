@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query"
 import { FoodData } from "../types/FoodData"
-
-const API_URL = "http://localhost:8080"
+import { API_URL } from "./urls"
 
 const fetchData = async (): Promise<FoodData[]> => {
   const url = `${API_URL}/food`

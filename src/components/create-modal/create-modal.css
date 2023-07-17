@@ -1,0 +1,38 @@
+.modal-overflow {
+  display: flex;
+  flex-direction: row;
+
+  background-color: white;
+  padding: 20px 75px;
+
+  border-radius: 25px;
+  
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-overflow form {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 300ms;
+}
+.btn:hover {
+  scale: 1.05;
+  border: 0.5px solid black;
+}
+
+.modal-overflow form .btn-primary {
+  background-color: chocolate;  
+}
+
+.modal-overflow form .btn-secondary {
+  background-color: rgb(189, 138, 102);  
+  font-weight: 400;
+}
